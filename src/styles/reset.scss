@@ -1,0 +1,49 @@
+// 브라우저가 가지고 있는 기본 css 속성 초기화
+
+#root {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  color: #ffffff;
+  background-color: #272c30;
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "JejuGothic";
+  // background-color: #4f81a9;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+input {
+  border: none;
+  outline: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+textarea {
+  border: none;
+  outline: none;
+}
