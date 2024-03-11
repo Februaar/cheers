@@ -1,21 +1,21 @@
 import "./main.scss";
+import CommonHeader from "../components/Items/CommonHeader";
 import Badge from "../components/Items/Badge";
-import Add from "../components/Buttons/Add";
+import New from "../components/Buttons/New";
 
 const MainPage = () => {
   return (
     <div id="main">
-      <header className="top">
-        <h1>Cheers</h1>
-      </header>
+      <CommonHeader title="치얼스" />
       <div className="main">
         <div className="search">
-          <input placeholder="어떤 아이돌의 생일을 축하해볼까요?" />
-          <span>구경하기</span>
+          <input placeholder="at the party 짠 해 cheers 🍷" />
         </div>
         <div className="container">
           <Badge />
-          <Add />
+          <Badge />
+          <Badge />
+          <New />
         </div>
       </div>
     </div>

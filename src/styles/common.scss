@@ -1,7 +1,14 @@
 // box-sizing, font-family 등 공통으로 사용하는 css 속성
 
+// @font-face {
+//   font-family: "JejuGothic";
+//   font-weight: normal;
+//   src: url("./fonts/JejuGothic.TTF") format("truetype");
+// }
+
 @font-face {
-  font-family: "JejuGothic";
+  font-family: 'TTHakgyoansimMonggeulmonggeulR';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2402_keris@1.0/TTHakgyoansimMonggeulmonggeulR.woff2') format('woff2');
   font-weight: normal;
-  src: url("./fonts/JejuGothic.TTF") format("truetype");
+  font-style: normal;
 }

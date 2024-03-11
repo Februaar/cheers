@@ -4,25 +4,12 @@
   align-items: center;
   width: 100%;
 
-  .header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    min-height: 5em;
-
-    span {
-      font-size: 1.5rem;
-    }
-  }
-
-  .cafe {
+  .cafe-infos {
     color: #222222;
     background-color: #ffffff;
     width: 70%;
     max-width: 1920px;
     height: auto;
-    margin-top: 40px;
 
     .top {
       display: flex;
@@ -35,9 +22,20 @@
         justify-content: center;
         align-items: center;
 
-        img {
-          width: 380px;
-          height: auto;
+        .slider {
+          display: flex;
+          flex-direction: row;
+
+          .card {
+            .cafe-img {
+              width: 380px;
+              height: auto;
+            }
+          }
+        }
+
+        .slider button:first-child {
+          transform: rotate(180deg);
         }
       }
 
@@ -49,7 +47,7 @@
         justify-content: space-between;
         padding: 24px 0;
 
-        .title {
+        .cafe-details {
           display: flex;
           flex-direction: column;
           width: 25em;
@@ -69,8 +67,19 @@
         }
 
         .date {
-          width: 25em;
+          width: 27em;
           height: 5em;
+          padding: 24px;
+
+          .status-bar {
+            border: 1px solid #272c30;
+          }
+
+          .exact-date {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 12px;
+          }
         }
 
         .location {
@@ -87,18 +96,18 @@
       margin-top: 40px;
       padding: 0 80px;
 
-      .title {
+      .subtitle {
         display: flex;
         align-items: center;
         height: 2.5rem;
 
         span {
-          font-size: 1.375rem;
+          font-size: 1.5rem;
           font-weight: 600;
         }
       }
 
-      .letters-area {
+      .contents-area {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-gap: 12px;
@@ -131,7 +140,7 @@
         }
       }
 
-      .letter-button {
+      .create-button {
         display: flex;
         justify-content: flex-end;
         margin-top: 20px;
@@ -142,17 +151,17 @@
           border-radius: 8px;
           font-size: 16px;
           color: #ffffff;
-          background: #9993d6;
+          background: #6e6eb7;
         }
       }
     }
   }
 
   @media screen and (max-width: 1366px) {
-    .cafe .top {
+    .cafe-infos .top {
       flex-direction: column;
 
-      .left-wrap img {
+      .left-wrap .cafe-img {
         width: 360px;
         height: auto;
       }
@@ -175,16 +184,16 @@
       }
     }
 
-    .cafe .bottom {
-      .letters-area {
+    .cafe-infos .bottom {
+      .contents-area {
         grid-template-columns: repeat(3, 1fr);
       }
     }
   }
 
   @media screen and (max-width: 960px) {
-    .cafe .top {
-      .left-wrap img {
+    .cafe-infos .top {
+      .left-wrap .cafe-img {
         width: 340px;
         height: auto;
       }
@@ -195,8 +204,8 @@
       }
     }
 
-    .cafe .bottom {
-      .letters-area {
+    .cafe-infos .bottom {
+      .contents-area {
         grid-template-columns: repeat(2, 1fr);
       }
     }

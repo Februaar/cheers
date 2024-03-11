@@ -1,42 +1,42 @@
 import "./cafe.scss";
-import { poster } from "../images/index";
+import { poster, poster2 } from "../images/index";
+import CommonHeader from "../components/Items/CommonHeader";
+import CardSlider from "../components/Items/CardSlider";
+import DateStatus from "../components/Items/Date";
+import Write from "../components/Buttons/Write";
 import Letter from "../components/Items/Letter";
 
 const CafePage = () => {
+  const cafes = [poster, poster2];
+
   return (
     <div id="cafe">
-      <div className="header">
-        <span>생일 카페 정보</span>
-      </div>
-      <div className="cafe">
+      <CommonHeader title="생일카페 정보" />
+      <div className="cafe-infos">
         <div className="top">
           <div className="left-wrap">
-            <img src={poster} alt="cafe-poster" />
+            <CardSlider cards={cafes} />
           </div>
           <div className="right-wrap">
-            <div className="title">
+            <div className="cafe-details">
               <span>SEVENTEEN</span>
               <span>홍대</span>
               <span>히치하이킹클럽</span>
             </div>
-            <div className="date">운영시간</div>
+            <DateStatus />
             <div className="location"></div>
           </div>
         </div>
         <div className="bottom">
-          <div className="title">
-            <span>SEVENTEEN 에게 편지 남기기</span>
+          <div className="subtitle">
+            <span>To. SEVENTEEN</span>
           </div>
-          <div className="letters-area">
-            <Letter />
-            <Letter />
+          <div className="contents-area">
             <Letter />
             <Letter />
             <Letter />
           </div>
-          <div className="letter-button">
-            <button>축하편지 남기기</button>
-          </div>
+          <Write />
         </div>
       </div>
     </div>

@@ -1,39 +1,23 @@
 #main {
-  width: 100%;
   display: flex;
   flex-direction: column;
-  margin: 10vh 20vh 15vw;
-
-  .top {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    h1 {
-      font-size: 48px;
-      width: 100%;
-      text-align: center;
-    }
-  }
+  width: 100%;
 
   .main {
-    flex: 4;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 80px;
 
     .search {
       display: flex;
       flex-direction: row;
       justify-content: center;
       align-items: center;
-      color: #222222;
-      background-color: #ffffff;
+      border: 2px solid #272c30;
       border-radius: 24px;
-      width: 60%;
-      height: 43px;
+      width: 42rem;
+      height: 3rem;
       margin-bottom: 24px;
 
       input {
@@ -41,6 +25,7 @@
         color: inherit;
         background-color: transparent;
         width: 80%;
+        height: 1.3rem;
       }
 
       span {
@@ -67,10 +52,9 @@
         justify-content: space-evenly;
         width: 120px;
         height: 120px;
-        color: #222222;
-        background-color: #ffffff;
-        
-        div {
+        border: 1px solid #272c30;
+
+        .item-img {
           display: flex;
           justify-content: center;
           align-items: center;
@@ -90,9 +74,9 @@
       .item:last-child {
         display: flex;
         justify-content: center;
-        background-color: #444444;
+        background-color: #272c30;
 
-        div {
+        .item-img {
           cursor: pointer;
           background-color: #ffffff;
           border: 1px dashed #272c30;
@@ -105,6 +89,10 @@
     }
 
     @media screen and (max-width: 1366px) {
+      .search {
+        width: 36rem;
+      }
+
       .container {
         grid-template-columns: repeat(3, 1fr);
 
@@ -116,8 +104,20 @@
     }
 
     @media screen and (max-width: 960px) {
+      .search {
+        width: 23rem;
+
+        input {
+          font-size: 16px;
+        }
+
+        span {
+          display: none;
+        }
+      }
+
       .container {
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(2, 1fr);
 
         .item {
           width: 100px;
