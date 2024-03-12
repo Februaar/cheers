@@ -43,6 +43,30 @@
           flex-direction: column;
           align-items: center;
           gap: 1.25rem;
+
+          .search-area {
+            width: 20rem;
+
+            .search {
+              display: flex;
+              flex-direction: row;
+              justify-content: center;
+              align-items: center;
+              height: 3rem;
+              border: 2px solid #272c30;
+              border-radius: 24px;
+              margin-top: 1.25rem;
+              margin-bottom: 0.625rem;
+
+              input {
+                font-size: 18px;
+                color: inherit;
+                background-color: transparent;
+                width: 80%;
+                height: 1.3rem;
+              }
+            }
+          }
         }
       }
     }
@@ -52,11 +76,19 @@
     .backdrop .container {
       width: 31.5rem;
     }
+
+    .backdrop .container .nav .nav-list .search-area {
+      width: 21rem;
+    }
   }
 
   @media screen and (max-width: 960px) {
     .backdrop .container {
       width: 32.5rem;
+    }
+
+    .backdrop .container .nav .nav-list .search-area {
+      width: 22rem;
     }
   }
 }

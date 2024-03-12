@@ -7,7 +7,6 @@
   .cafe-infos {
     color: #222222;
     background-color: #ffffff;
-    width: 70%;
     max-width: 1920px;
     height: auto;
 
@@ -45,7 +44,7 @@
         flex-direction: column;
         align-items: flex-start;
         justify-content: space-between;
-        padding: 24px 0;
+        padding-top: 24px;
 
         .cafe-details {
           display: flex;
@@ -67,8 +66,8 @@
         }
 
         .date {
-          width: 27em;
-          height: 5em;
+          position: relative;
+          width: 100%;
           padding: 24px;
 
           .status-bar {
@@ -80,12 +79,12 @@
             justify-content: space-between;
             padding-top: 12px;
           }
-        }
 
-        .location {
-          width: 27em;
-          height: 17em;
-          background-color: #e0e0e0;
+          .status-pin {
+            position: absolute;
+            top: 6px;
+            left: 110px;
+          }
         }
       }
     }
@@ -151,7 +150,7 @@
           border-radius: 8px;
           font-size: 16px;
           color: #ffffff;
-          background: #6e6eb7;
+          background: #8f8ed4;
         }
       }
     }
@@ -159,8 +158,6 @@
 
   @media screen and (max-width: 1366px) {
     .cafe-infos .top {
-      flex-direction: column;
-
       .left-wrap .cafe-img {
         width: 360px;
         height: auto;
@@ -170,8 +167,7 @@
         align-items: center;
 
         .location {
-          width: 30em;
-          height: 20em;
+          height: 16em;
         }
       }
 
@@ -193,13 +189,15 @@
 
   @media screen and (max-width: 960px) {
     .cafe-infos .top {
+      flex-direction: column;
+
       .left-wrap .cafe-img {
         width: 340px;
         height: auto;
       }
 
       .right-wrap .location {
-        width: 25em;
+        width: 27em;
         height: 15em;
       }
     }

@@ -18,11 +18,18 @@ const Sidebar = ({ onClick }) => {
             <ul className="nav-list">
               <li>
                 <a href="/">홈</a>
-                </li>
+              </li>
               <li>
                 <a href="/total">생일카페 리스트</a>
               </li>
               <li>서비스 소개</li>
+              <li>
+                <div className="search-area">
+                  <div className="search">
+                    <input placeholder="happy birthday 🍷" />
+                  </div>
+                </div>
+              </li>
             </ul>
           </div>
         </div>

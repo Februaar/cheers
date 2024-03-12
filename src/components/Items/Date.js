@@ -1,4 +1,4 @@
-import { pin } from "../../images/index";
+import { cheers } from "../../images/index";
 
 const DateStatus = () => {
   return (
@@ -8,8 +8,8 @@ const DateStatus = () => {
         <span>6월 10일</span>
         <span>6월 15일</span>
       </div>
-      <div>
-        <img src={pin} alt="status-pin" />
+      <div className="status-pin">
+        <img src={cheers} alt="status-pin" />
       </div>
     </div>
   );

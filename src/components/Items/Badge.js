@@ -1,13 +1,14 @@
-import { sev } from "../../images/index";
-
-const Badge = () => {
+const Badge = ({ artist }) => {
   return (
-    <div className="item">
-      <div className="item-img">
-        <img src={sev} alt="item-img" width={24} height={24} />
-      </div>
-      <span className="name">SEVENTEEN</span>
-    </div>
+    <>
+      {artist.map((image, index) => (
+        <div className="item" key={index}>
+          <a href="/cafe">
+            <img src={image} alt="item-img" width={100} height={100} />
+          </a>
+        </div>
+      ))}
+    </>
   );
 };
 

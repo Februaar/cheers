@@ -2,6 +2,7 @@ import "./cafe.scss";
 import { poster, poster2 } from "../images/index";
 import CommonHeader from "../components/Items/CommonHeader";
 import CardSlider from "../components/Items/CardSlider";
+import BriefMap from "../components/Items/BriefMap";
 import DateStatus from "../components/Items/Date";
 import Write from "../components/Buttons/Write";
 import Letter from "../components/Items/Letter";
@@ -24,7 +25,7 @@ const CafePage = () => {
               <span>히치하이킹클럽</span>
             </div>
             <DateStatus />
-            <div className="location"></div>
+            <BriefMap />
           </div>
         </div>
         <div className="bottom">
