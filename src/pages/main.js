@@ -17,12 +17,12 @@ const MainPage = () => {
               <Badge artist={artist} />
             </div>
           </div>
-          {/* <div className="tab">
+          <div className="tab">
             <div className="tab-title">EVENTS</div>
             <div className="items-container">
               <div>진행중인 이벤트</div>
             </div>
-          </div> */}
+          </div>
         </div>
       </div>
     </div>

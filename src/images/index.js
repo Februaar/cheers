@@ -11,6 +11,7 @@ import sev from "./carat.png";
 import seventeen from "./seventeen.png";
 import poster from "./poster.png";
 import poster2 from "./poster2.png";
+import poster3 from "./poster3.png";
 import masking from "./masking.png";
 import chevron from "./chevron.png";
 
@@ -28,6 +29,7 @@ export {
   pin,
   poster,
   poster2,
+  poster3,
   masking,
   chevron,
 };

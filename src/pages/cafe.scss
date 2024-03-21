@@ -7,13 +7,17 @@
   .cafe-infos {
     color: #222222;
     background-color: #ffffff;
+    width: 62.5em;
     max-width: 1920px;
-    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     .top {
       display: flex;
       flex-direction: row;
-      padding: 40px;
+      width: 100%;
+      margin: 5em 0 2.75em 0;
 
       .left-wrap {
         flex: 1;
@@ -27,7 +31,7 @@
 
           .card {
             .cafe-img {
-              width: 380px;
+              width: 100%;
               height: auto;
             }
           }
@@ -44,24 +48,38 @@
         flex-direction: column;
         align-items: flex-start;
         justify-content: space-between;
-        padding-top: 24px;
+        gap: 1.25rem;
 
         .cafe-details {
           display: flex;
           flex-direction: column;
-          width: 25em;
+          width: 100%;
+          padding-top: 24px;
+          gap: 1.25rem;
 
-          span {
+          .details {
+            display: flex;
+            flex-direction: column;
             font-size: 22px;
-            padding-bottom: 5px;
+            gap: 0.5rem;
+
+            .details-info {
+              display: flex;
+              align-items: center;
+              gap: 0.25rem;
+            }
           }
 
-          span:first-child {
+          .details span:first-child {
             font-weight: 600;
           }
 
-          span:last-child {
-            padding: 0;
+          .location {
+            display: flex;
+            flex-direction: column;
+            font-size: 18px;
+            font-weight: 400;
+            gap: 0.5rem;
           }
         }
 
@@ -87,21 +105,81 @@
           }
         }
       }
+
+      @media screen and (max-width: 1366px) {
+        .right-wrap {
+          gap: 1rem;
+          .cafe-details {
+            gap: 1rem;
+            padding: 0;
+            .details {
+              font-size: 20px;
+            }
+            .location {
+              font-size: 16px;
+            }
+          }
+          .date {
+            padding: 12px 24px;
+          }
+        }
+      }
+
+      @media screen and (max-width: 960px) {
+        .right-wrap {
+          width: 80%;
+          .cafe-details {
+            padding-top: 24px;
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: 1366px) {
+      .top {
+        width: 56.25em;
+      }
+    }
+
+    @media screen and (max-width: 960px) {
+      .top {
+        flex-direction: column;
+        align-items: center;
+        width: 31.25em;
+      }
     }
 
     .bottom {
       display: flex;
       flex-direction: column;
-      margin-top: 40px;
-      padding: 0 80px;
+      align-items: center;
+      gap: 1.25rem;
+      width: 56.25em;
+      padding-top: 3.5em;
+      border-top: 1px solid #dbdbdb;
 
       .subtitle {
-        display: flex;
-        align-items: center;
-        height: 2.5rem;
+        width: 100%;
+        text-align: center;
+        padding: 24px 0;
 
         span {
-          font-size: 1.5rem;
+          font-size: 32px;
+          font-weight: 600;
+          background: linear-gradient(to right, #92a8d1, #f7cac9);
+          -webkit-background-clip: text;
+          background-clip: text;
+          color: transparent;
+        }
+      }
+
+      .to {
+        margin-bottom: 18px;
+        width: 100%;
+        text-align: center;
+
+        span {
+          font-size: 24px;
           font-weight: 600;
         }
       }
@@ -110,31 +188,58 @@
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-gap: 12px;
-        justify-items: center;
         padding-top: 24px;
-        max-width: 1190px;
+        width: 100%;
+        justify-items: center;
 
         .item {
           position: relative;
-          width: 12.5rem;
+          width: 80%;
           height: 320px;
 
           .masking {
             position: absolute;
             top: 0;
-            left: 25%;
+            left: 0;
             margin: 0 auto;
             z-index: 5;
+            width: 100%;
+            text-align: center;
           }
 
           .letter {
             position: absolute;
             top: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             height: 90%;
             width: 100%;
+            padding: 18px 24px;
             border-top: 2px solid #272c30;
             border-bottom: 2px solid #272c30;
-            padding: 18px 0;
+
+            span {
+              font-size: 20px;
+            }
+          }
+        }
+      }
+
+      @media screen and (max-width: 1366px) {
+        .contents-area {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+
+      @media screen and (max-width: 960px) {
+        .contents-area {
+          grid-template-columns: repeat(2, 1fr);
+          .item {
+            height: 280px;
+            .letter span {
+              font-size: 18px;
+            }
           }
         }
       }
@@ -154,58 +259,37 @@
         }
       }
     }
-  }
 
-  @media screen and (max-width: 1366px) {
-    .cafe-infos .top {
-      .left-wrap .cafe-img {
-        width: 360px;
-        height: auto;
-      }
-
-      .right-wrap {
-        align-items: center;
-
-        .location {
-          height: 16em;
+    @media screen and (max-width: 1366px) {
+      .bottom {
+        width: 50em;
+        .subtitle {
+          padding: 16px 0;
+          span {
+            font-size: 30px;
+          }
         }
-      }
-
-      .right-wrap div {
-        margin-bottom: 16px;
-      }
-
-      .right-wrap div:last-child {
-        margin-bottom: 0;
+        .to span {
+          font-size: 22px;
+        }
       }
     }
 
-    .cafe-infos .bottom {
-      .contents-area {
-        grid-template-columns: repeat(3, 1fr);
+    @media screen and (max-width: 960px) {
+      .bottom {
+        width: 25em;
+        .to {
+          margin: 0;
+        }
       }
     }
   }
 
   @media screen and (max-width: 960px) {
-    .cafe-infos .top {
+    .cafe-infos {
+      display: flex;
       flex-direction: column;
-
-      .left-wrap .cafe-img {
-        width: 340px;
-        height: auto;
-      }
-
-      .right-wrap .location {
-        width: 27em;
-        height: 15em;
-      }
-    }
-
-    .cafe-infos .bottom {
-      .contents-area {
-        grid-template-columns: repeat(2, 1fr);
-      }
+      align-items: center;
     }
   }
 }

@@ -18,7 +18,13 @@ const CardSlider = ({ cards }) => {
         <img src={chevron} alt="prev-button" width={38} />
       </button>
       <div className="card">
-        <img src={cards[currentIndex]} alt="cafe-poster" className="cafe-img" />
+        <img
+          src={cards[currentIndex]}
+          alt="cafe-poster"
+          width={420}
+          height={600}
+          className="cafe-img"
+        />
       </div>
       <button onClick={nextClick}>
         <img src={chevron} alt="next-button" width={38} />

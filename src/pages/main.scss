@@ -8,16 +8,20 @@
     flex-direction: column;
     align-items: center;
     gap: 1.25rem;
+    max-width: 1920px;
     margin-top: 3rem;
 
     .container {
-      width: 62.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      width: 62.5em;
 
       .tab {
         display: flex;
         flex-direction: column;
         gap: 1.25rem;
-        
+
         .tab-title {
           font-size: 2.5rem;
           margin-top: 1.5rem;
@@ -30,8 +34,6 @@
           justify-items: center;
           padding: 12px 24px;
           gap: 1.25rem;
-          max-width: 1920px;
-          overflow-x: scroll;
 
           .item {
           }
@@ -41,7 +43,7 @@
 
     @media screen and (max-width: 1366px) {
       .container {
-        width: 50rem;
+        width: 56.25em;
 
         .tab-title {
           font-size: 2.25rem;
@@ -56,7 +58,7 @@
 
     @media screen and (max-width: 960px) {
       .container {
-        width: 37.5rem;
+        width: 37.5em;
 
         .tab-title {
           font-size: 2rem;

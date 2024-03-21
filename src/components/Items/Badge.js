@@ -3,7 +3,7 @@ const Badge = ({ artist }) => {
     <>
       {artist.map((image, index) => (
         <div className="item" key={index}>
-          <a href="/cafe">
+          <a href="/cafe/1">
             <img src={image} alt="item-img" width={100} height={100} />
           </a>
         </div>

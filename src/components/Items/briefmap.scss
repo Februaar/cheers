@@ -1,12 +1,11 @@
-#brief-map {
+#map {
   position: relative;
   width: 100%;
   height: 17em;
-  // background-color: #e0e0e0;
+}
 
-  .map-container {
-    width: 100%;
-    height: 100%;
-    // background-color: #e0e0e0;
+@media screen and (max-width: 1366px) {
+  #map {
+    height: 15em;
   }
 }

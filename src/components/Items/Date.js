@@ -1,12 +1,12 @@
 import { cheers } from "../../images/index";
 
-const DateStatus = () => {
+const DateStatus = ({ start, end }) => {
   return (
     <div className="date">
       <p className="status-bar" />
       <div className="exact-date">
-        <span>6월 10일</span>
-        <span>6월 15일</span>
+        <span>{start}</span>
+        <span>{end}</span>
       </div>
       <div className="status-pin">
         <img src={cheers} alt="status-pin" />

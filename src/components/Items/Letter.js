@@ -6,7 +6,9 @@ const Letter = () => {
       <div className="masking">
         <img src={masking} alt="masking" width={80} height={30} />
       </div>
-      <div className="letter">편지 내용 축하 축하</div>
+      <div className="letter">
+        <span>순영아 생일 축하해순영아 생일 축하해순영아 생일 축하해순영아 생일 축하해순영아 생일 축하해순영아 생일 축하해</span>
+      </div>
     </div>
   );
 };
