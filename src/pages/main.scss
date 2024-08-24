@@ -23,19 +23,51 @@
         gap: 1.25rem;
 
         .tab-title {
-          font-size: 2.5rem;
-          margin-top: 1.5rem;
+          font-size: 38px;
+          margin-left: 2.55rem;
           margin-bottom: 0.875rem;
         }
 
         .items-container {
-          display: flex;
-          flex-direction: row;
-          justify-items: center;
-          padding: 12px 24px;
-          gap: 1.25rem;
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          row-gap: 3.125rem;
 
           .item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            img {
+              width: 80%;
+              height: auto;
+              cursor: pointer;
+              border-radius: 24px;
+            }
+          }
+
+          .item.disabled {
+            opacity: 0.5;
+            pointer-events: none;
+          }
+        }
+
+        @media screen and (max-width: 1366px) {
+          .items-container {
+            grid-template-columns: repeat(3, 1fr);
+            row-gap: 3.75rem;
+          }
+        }
+
+        @media screen and (max-width: 960px) {
+          .items-container {
+            grid-template-columns: repeat(1, 1fr);
+            gap: 1.25rem;
+
+            .item img {
+              width: 60%;
+            }
           }
         }
       }
@@ -45,28 +77,21 @@
       .container {
         width: 56.25em;
 
-        .tab-title {
-          font-size: 2.25rem;
-        }
-
-        .item img {
-          width: 90px;
-          height: 90px;
+        .tab .tab-title {
+          font-size: 34px;
+          margin-left: 1.5rem;
         }
       }
     }
 
     @media screen and (max-width: 960px) {
       .container {
-        width: 37.5em;
+        width: 31.25em;
 
-        .tab-title {
-          font-size: 2rem;
-        }
-
-        .item img {
-          width: 80px;
-          height: 80px;
+        .tab .tab-title {
+          font-size: 32px;
+          text-align: center;
+          margin-bottom: 0.875rem;
         }
       }
     }

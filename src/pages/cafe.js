@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useState, useEffect } from "react";
+import { useCallback, useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import "./cafe.scss";
 import CommonHeader from "../components/Items/CommonHeader";
@@ -14,18 +14,18 @@ const CafePage = () => {
   const [cafeList, setCafeList] = useState([]);
   const { cafeId } = useParams();
 
-  const getData = async () => {
+  const getData = useCallback(async () => {
     try {
       const res = await axios.get(`${BASE_URL}/data?cafeId=${cafeId}`);
       setCafeList(res.data);
     } catch (err) {
       console.error("error", err);
     }
-  };
+  }, [BASE_URL, cafeId]);
 
   useEffect(() => {
     getData();
-  }, [cafeId]);
+  }, [getData, cafeId]);
 
   return (
     <div id="cafe">
@@ -67,10 +67,6 @@ const CafePage = () => {
                   <span>To. {list.name}</span>
                 </div>
                 <div className="contents-area">
-                  <Letter />
-                  <Letter />
-                  <Letter />
-                  <Letter />
                   <Letter />
                 </div>
                 <Write />

@@ -14,6 +14,19 @@ import poster2 from "./poster2.png";
 import poster3 from "./poster3.png";
 import masking from "./masking.png";
 import chevron from "./chevron.png";
+import coups from "./profile/coups.png";
+import hanni from "./profile/hanni.png";
+import shua from "./profile/shua.png";
+import jun from "./profile/jun.png";
+import hoshi from "./profile/hoshi.png";
+import wonwoo from "./profile/wonwoo.png";
+import woozi from "./profile/woozi.png";
+import deight from "./profile/deight.png";
+import mingyu from "./profile/mingyu.png";
+import dk from "./profile/dk.png";
+import vernon from "./profile/vernon.png";
+import gwani from "./profile/gwani.png";
+import dino from "./profile/dino.png";
 
 export {
   logo,
@@ -32,4 +45,17 @@ export {
   poster3,
   masking,
   chevron,
+  coups,
+  hanni,
+  shua,
+  jun,
+  hoshi,
+  wonwoo,
+  woozi,
+  deight,
+  mingyu,
+  dk,
+  vernon,
+  gwani,
+  dino,
 };

@@ -1,14 +1,9 @@
-const Badge = ({ artist }) => {
+const Badge = ({ list }) => {
+  console.log(list);
   return (
-    <>
-      {artist.map((image, index) => (
-        <div className="item" key={index}>
-          <a href="/cafe/1">
-            <img src={image} alt="item-img" width={100} height={100} />
-          </a>
-        </div>
-      ))}
-    </>
+    <div className="item">
+      <a href={`/artist/${list.name}`}>{list.id}</a>
+    </div>
   );
 };
 

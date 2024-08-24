@@ -21,7 +21,7 @@ const Sidebar = ({ onClick }) => {
                 <a href="/">홈</a>
               </li>
               <li>
-                <a href="/total">생일카페 리스트</a>
+                <a href="/total">전체 생일카페 리스트</a>
               </li>
               <li>서비스 소개</li>
             </ul>
@@ -31,8 +31,6 @@ const Sidebar = ({ onClick }) => {
               </div>
               <div className="history-title">최근 검색어</div>
               <div className="history">
-                <Tag />
-                <Tag />
                 <Tag />
               </div>
             </div>

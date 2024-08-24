@@ -89,19 +89,15 @@
           padding: 24px;
 
           .status-bar {
+            position: relative;
+            width: "80%";
             border: 1px solid #272c30;
           }
 
           .exact-date {
             display: flex;
             justify-content: space-between;
-            padding-top: 12px;
-          }
-
-          .status-pin {
-            position: absolute;
-            top: 6px;
-            left: 110px;
+            padding-top: 26px;
           }
         }
       }
