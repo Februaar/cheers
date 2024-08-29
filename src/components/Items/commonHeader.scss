@@ -3,17 +3,31 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  min-width: 26.875em;
   min-height: 5em;
   padding: 0 36px;
+  text-align: center;
   color: #ffffff;
   background: linear-gradient(to right, #92a8d1, #f7cac9);
-
+  
   .hamburger {
     cursor: pointer;
   }
-
+  
   .common-title {
     margin: 0 auto;
     font-size: 2.125rem;
+
+    @media screen and (max-width: 1366px) {
+      span {
+        font-size: 2rem;
+      }
+    }
+
+    @media screen and (max-width: 960px) {
+      span {
+        font-size: 1.75rem;
+      }
+    }
   }
 }

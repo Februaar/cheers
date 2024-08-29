@@ -12,6 +12,7 @@ import Letter from "../components/Items/Letter";
 const CafePage = () => {
   const BASE_URL = process.env.REACT_APP_BASE_URL;
   const [cafeList, setCafeList] = useState([]);
+  console.log(typeof cafeList);
   const { cafeId } = useParams();
 
   const getData = useCallback(async () => {

@@ -8,6 +8,7 @@ import ListItem from "../components/Items/List";
 const TotalPage = () => {
   const BASE_URL = process.env.REACT_APP_BASE_URL;
   const [cafeList, setCafeList] = useState([]);
+  console.log(cafeList);
   const navigate = useNavigate();
 
   useEffect(() => {
