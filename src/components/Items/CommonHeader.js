@@ -16,13 +16,15 @@ const CommonHeader = ({ title }) => {
 
   return (
     <div id="page-header">
-      <div onClick={sidebarOpen} role="button" className="hamburger">
-        <img src={menu} alt="hamburger-icon" width={30} height={30} />
+      <div className="page-header">
+        <div onClick={sidebarOpen} role="button" className="hamburger">
+          <img src={menu} alt="hamburger-icon" width={30} height={30} />
+        </div>
+        <div className="common-title">
+          <span>{title}</span>
+        </div>
+        {isSidebarOpen ? <Sidebar onClick={sidebarClose} /> : null}
       </div>
-      <div className="common-title">
-        <span>{title}</span>
-      </div>
-      {isSidebarOpen ? <Sidebar onClick={sidebarClose} /> : null}
     </div>
   );
 };

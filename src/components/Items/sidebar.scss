@@ -1,6 +1,6 @@
 #sidebar {
   .backdrop {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     display: flex;
@@ -8,7 +8,7 @@
     height: 100%;
     color: #222222;
     background-color: rgba(0, 0, 0, 0.5);
-    z-index: 10;
+    z-index: 999;
 
     .sidebar-container {
       position: relative;

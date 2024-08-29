@@ -1,32 +1,39 @@
 #page-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  min-width: 26.875em;
-  min-height: 5em;
-  padding: 0 36px;
-  text-align: center;
-  color: #ffffff;
-  background: linear-gradient(to right, #92a8d1, #f7cac9);
-  
-  .hamburger {
-    cursor: pointer;
-  }
-  
-  .common-title {
-    margin: 0 auto;
-    font-size: 2.125rem;
+  z-index: 10000;
 
-    @media screen and (max-width: 1366px) {
-      span {
-        font-size: 2rem;
-      }
+  .page-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 26.875em;
+    min-height: 5em;
+    padding: 0 36px;
+    text-align: center;
+    color: #ffffff;
+    background: linear-gradient(to right, #92a8d1, #f7cac9);
+
+    .hamburger {
+      cursor: pointer;
     }
 
-    @media screen and (max-width: 960px) {
-      span {
-        font-size: 1.75rem;
+    .common-title {
+      margin: 0 auto;
+      font-size: 2.125rem;
+
+      @media screen and (max-width: 1366px) {
+        span {
+          font-size: 2rem;
+        }
+      }
+
+      @media screen and (max-width: 960px) {
+        span {
+          font-size: 1.75rem;
+        }
       }
     }
   }

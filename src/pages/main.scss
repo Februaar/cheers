@@ -1,15 +1,16 @@
 #main {
-  display: flex;
-  flex-direction: column;
   width: 100%;
+  min-width: 26.875em;
+  max-width: 1920px;
+  overflow-x: hidden;
 
   .main {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1.25rem;
-    max-width: 1920px;
     margin-top: 3rem;
+    padding-bottom: 5em;
 
     .container {
       display: flex;
