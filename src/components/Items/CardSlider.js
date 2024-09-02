@@ -15,19 +15,19 @@ const CardSlider = ({ cards }) => {
   return (
     <div className="slider">
       <button onClick={prevClick}>
-        <img src={chevron} alt="prev-button" width={38} />
+        <img src={chevron} alt="prev-button" width={35} />
       </button>
       <div className="card">
         <img
           src={cards[currentIndex]}
           alt="cafe-poster"
-          width={420}
+          width={430}
           height={600}
           className="cafe-img"
         />
       </div>
       <button onClick={nextClick}>
-        <img src={chevron} alt="next-button" width={38} />
+        <img src={chevron} alt="next-button" width={35} />
       </button>
     </div>
   );

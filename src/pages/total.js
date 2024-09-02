@@ -24,7 +24,7 @@ const TotalPage = () => {
       <CommonHeader title="전체 생일카페 리스트" />
       <div className="total-container">
         <div className="list-area">
-          {cafeList.map((list) => (
+          {cafeList && cafeList.map((list) => (
             <ListItem
               key={list.id}
               list={list}
