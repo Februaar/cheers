@@ -31,7 +31,7 @@ const CafePage = () => {
   return (
     <div id="cafe">
       <CommonHeader title="생일카페 정보" />
-      <div className="cafe-infos">
+      <div className="page-infos">
         {cafeList &&
           cafeList.map((list) => {
             return (
@@ -41,24 +41,35 @@ const CafePage = () => {
                     <CardSlider cards={list.cafeImage} />
                   </div>
                   <div className="right-wrap">
-                    <div className="cafe-details">
-                      <div className="details">
-                        <div className="details-info">
-                          <span>{list.groupName}</span>
-                          <span>[{list.name}] 🍰</span>
+                    <div className="right-detail">
+
+                      <div className="right-top">
+                        <div className="cafe-infos">
+                          <div className="name">
+                            <span>{list.groupName}</span>
+                            <span>[{list.name}] 🍰</span>
+                          </div>
+                          <div>{list.station}</div>
+                          <div>{list.cafeName}</div>
                         </div>
-                        <span>{list.station}</span>
-                        <span>{list.cafeName}</span>
+
+                        <div className="cafe-address">
+                          <p>주소: {list.address}</p>
+                          <p>영업시간: {list.openingHours}</p>
+                        </div>
                       </div>
-                      <div className="location">
-                        <span>주소: {list.address}</span>
-                        <span>영업시간: {list.openingHours}</span>
+
+                      <div className="right-mid">
+                        <p>운영 날짜</p>
+                        <DateStatus start={list.start} end={list.end} />
                       </div>
+
+                      <div className="right-bottom">
+                        <p>위치 확인하기</p>
+                        <BriefMap lat={list.latitude} lng={list.longitude} />
+                      </div>
+
                     </div>
-                    <div>운영 날짜</div>
-                    <DateStatus start={list.start} end={list.end} />
-                    <div>위치 확인하기</div>
-                    <BriefMap lat={list.latitude} lng={list.longitude} />
                   </div>
                 </div>
                 <div className="bottom">
