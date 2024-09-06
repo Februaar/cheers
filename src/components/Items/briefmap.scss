@@ -6,6 +6,12 @@
 
 @media screen and (max-width: 1366px) {
   #map {
-    height: 15em;
+    height: 12.5em;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  #map {
+    // height: 12.5em;
   }
 }
