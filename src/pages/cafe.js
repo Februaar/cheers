@@ -42,7 +42,6 @@ const CafePage = () => {
                   </div>
                   <div className="right-wrap">
                     <div className="right-detail">
-
                       <div className="right-top">
                         <div className="cafe-infos">
                           <div className="name">
@@ -68,16 +67,15 @@ const CafePage = () => {
                         <p>위치 확인하기</p>
                         <BriefMap lat={list.latitude} lng={list.longitude} />
                       </div>
-
                     </div>
                   </div>
                 </div>
                 <div className="bottom">
                   <div className="subtitle">
-                    <span>멤버에게 생일 편지 남기기</span>
+                    <p>멤버에게 생일 편지 남기기</p>
                   </div>
                   <div className="to">
-                    <span>To. {list.name}</span>
+                    <p>To. {list.name}</p>
                   </div>
                   <div className="contents-area">
                     <Letter />

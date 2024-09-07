@@ -7,7 +7,7 @@ const Letter = () => {
         <img src={masking} alt="masking" width={80} height={30} />
       </div>
       <div className="letter">
-        <span>호시야 생일 축하해</span>
+        <p>호시야 생일 축하해</p>
       </div>
     </div>
   );
