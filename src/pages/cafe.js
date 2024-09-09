@@ -31,61 +31,59 @@ const CafePage = () => {
   return (
     <div id="cafe">
       <CommonHeader title="생일카페 정보" />
-      <div className="page-infos">
-        {cafeList &&
-          cafeList.map((list) => {
-            return (
-              <>
-                <div className="top" key={list.id}>
-                  <div className="left-wrap">
-                    <CardSlider cards={list.cafeImage} />
-                  </div>
-                  <div className="right-wrap">
-                    <div className="right-detail">
-                      <div className="right-top">
-                        <div className="cafe-infos">
-                          <div className="name">
-                            <span>{list.groupName}</span>
-                            <span>[{list.name}] 🍰</span>
-                          </div>
-                          <div>{list.station}</div>
-                          <div>{list.cafeName}</div>
+      {cafeList &&
+        cafeList.map((list) => {
+          return (
+            <div className="page-infos" key={list.id}>
+              <div className="top">
+                <div className="left-wrap">
+                  <CardSlider cards={list.cafeImage} />
+                </div>
+                <div className="right-wrap">
+                  <div className="right-detail">
+                    <div className="right-top">
+                      <div className="cafe-infos">
+                        <div className="name">
+                          <span>{list.groupName}</span>
+                          <span>[{list.name}] 🍰</span>
                         </div>
-
-                        <div className="cafe-address">
-                          <p>주소: {list.address}</p>
-                          <p>영업시간: {list.openingHours}</p>
-                        </div>
+                        <div>{list.station}</div>
+                        <div>{list.cafeName}</div>
                       </div>
 
-                      <div className="right-mid">
-                        <p>운영 날짜</p>
-                        <DateStatus start={list.start} end={list.end} />
+                      <div className="cafe-address">
+                        <p>주소: {list.address}</p>
+                        <p>영업시간: {list.openingHours}</p>
                       </div>
+                    </div>
 
-                      <div className="right-bottom">
-                        <p>위치 확인하기</p>
-                        <BriefMap lat={list.latitude} lng={list.longitude} />
-                      </div>
+                    <div className="right-mid">
+                      <p>운영 날짜</p>
+                      <DateStatus start={list.start} end={list.end} />
+                    </div>
+
+                    <div className="right-bottom">
+                      <p>위치 확인하기</p>
+                      <BriefMap lat={list.latitude} lng={list.longitude} />
                     </div>
                   </div>
                 </div>
-                <div className="bottom">
-                  <div className="subtitle">
-                    <p>멤버에게 생일 편지 남기기</p>
-                  </div>
-                  <div className="to">
-                    <p>To. {list.name}</p>
-                  </div>
-                  <div className="contents-area">
-                    <Letter />
-                  </div>
-                  <Write />
+              </div>
+              <div className="bottom">
+                <div className="subtitle">
+                  <p>멤버에게 생일 편지 남기기</p>
                 </div>
-              </>
-            );
-          })}
-      </div>
+                <div className="to">
+                  <p>To. {list.name}</p>
+                </div>
+                <div className="contents-area">
+                  <Letter />
+                </div>
+                <Write />
+              </div>
+            </div>
+          );
+        })}
     </div>
   );
 };
