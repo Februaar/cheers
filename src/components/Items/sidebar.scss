@@ -11,15 +11,13 @@
     z-index: 999;
 
     .sidebar-container {
+      width: 474px;
+      min-width: 430px;
+      min-height: 932px;
       position: relative;
       display: flex;
-      flex-direction: row;
-      align-items: stretch;
-      justify-content: space-evenly;
       font-size: 1.5rem;
       line-height: 2rem;
-      width: 30.5rem;
-      max-width: 1920px;
       padding: 46px 50px;
       border-top-right-radius: 12px;
       border-bottom-right-radius: 12px;
@@ -133,8 +131,6 @@
 
   @media screen and (max-width: 1366px) {
     .backdrop .sidebar-container {
-      width: 31.5rem;
-
       .nav .nav-list .search-area {
         width: 21rem;
       }
@@ -144,7 +140,6 @@
   @media screen and (max-width: 960px) {
     .backdrop .sidebar-container {
       width: 32.5rem;
-      padding: 28px;
       border-radius: 0px;
 
       .nav .nav-list .search-area {
