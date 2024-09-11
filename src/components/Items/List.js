@@ -1,5 +1,4 @@
 const ListItem = ({ list, onClick }) => {
-  console.log(list);
   return (
     <div className="list">
       <div className="poster" onClick={onClick}>
