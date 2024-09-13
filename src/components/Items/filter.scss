@@ -1,0 +1,29 @@
+.filter-container {
+  width: 100%;
+  margin-top: 12px;
+
+  .filter-buttons {
+    display: none;
+
+    padding-top: 12px;
+    margin-top: 8px;
+
+    &.visible {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      justify-items: center;
+    }
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  .filter-container {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .filter-container {
+    width: 80%;
+  }
+}

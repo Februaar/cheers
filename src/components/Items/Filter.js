@@ -51,14 +51,14 @@ const SearchFilter = () => {
   ];
 
   return (
-    <div>
+    <div className="filter-container">
       <div
         onClick={() => dispatch({ type: "TOGGLE" })}
-        style={{ cursor: "pointer" }}
+        style={{ cursor: "pointer", width: "fit-content" }}
       >
-        멤버별
+        <span>멤버별</span>
       </div>
-      <div>
+      <div className={`filter-buttons ${state.isVisible ? "visible" : ""}`}>
         {state.isVisible &&
           buttons.map(({ value, label }) => (
             <Button

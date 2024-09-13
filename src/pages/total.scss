@@ -16,13 +16,6 @@
     margin-top: 5em;
     padding-bottom: 5em;
 
-    .select-design {
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      margin-top: 12px;
-    }
-
     .list-area {
       width: 100%;
       height: 100%;
@@ -110,6 +103,8 @@
     .total-container {
       width: 31.25em;
       min-width: 20em;
+      display: flex;
+      align-items: center;
 
       .select-design {
         margin-top: 12px;

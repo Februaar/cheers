@@ -23,9 +23,7 @@ const TotalPage = () => {
     <div id="total">
       <CommonHeader title="전체 생일카페 리스트" />
       <div className="total-container">
-        <div className="select-design">
-          <SearchFilter />
-        </div>
+        <SearchFilter />
         <div className="list-area">
           {cafeList.map((list) => (
             <ListItem
