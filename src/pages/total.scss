@@ -104,7 +104,8 @@
       width: 31.25em;
       min-width: 20em;
       display: flex;
-      align-items: center;
+      align-items: flex-start;
+      flex-direction: row;
 
       .select-design {
         margin-top: 12px;

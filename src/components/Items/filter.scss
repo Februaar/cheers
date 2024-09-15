@@ -24,6 +24,12 @@
 
 @media screen and (max-width: 960px) {
   .filter-container {
-    width: 80%;
+    width: 100px;
+
+    .filter-buttons.visible {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 }
